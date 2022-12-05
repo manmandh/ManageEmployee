@@ -13,8 +13,8 @@ public class Handle {
 
     //Add 3 Employee
     public void addEmployee(){
-        for (int i=0; i<3; i++){
-            System.out.println(String.format("Enter information (%d/%d)", i+1, 3));
+        for (int i=0; i<6; i++){
+            System.out.println(String.format("Enter information (%d/%d)", i+1, 6));
             Employee employee = new Employee();
             employee.AddInformation();
             this.add(employee);
@@ -55,6 +55,16 @@ public class Handle {
                 employee.OutInformation();
         }
 
+    }
+
+    //Find by firstName
+    public void fidByFirstName(String firstName) {
+        for (Employee employee : list) {
+            String fullName = employee.getFullOfName();
+            String str[] = fullName.split(" ");
+            if (str[str.length - 1].equals(firstName))
+                employee.OutInformation();
+        }
     }
 
 

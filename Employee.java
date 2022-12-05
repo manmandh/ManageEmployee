@@ -61,7 +61,4 @@ public class Employee {
     {
         System.out.println("Full of name: " +getFullOfName()+", Year: " + getYear() +", Coefficient: " + getCoefficient() + ", Seniority: " + getSeniority());
     }
-
-
-
 }

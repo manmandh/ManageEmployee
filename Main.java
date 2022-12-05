@@ -7,7 +7,8 @@ public class Main {
         System.out.println(" 2.Print information for 3 employees: ");
         System.out.println(" 3.Check seniority and coefficient: ");
         System.out.println(" 4.Print Employee has the highest salary: ");
-        System.out.println(" 5.Quit system: ");
+        System.out.println(" 5.Find By FirstName: ");
+        System.out.println(" 6.Quit system: ");
     }
     public static void main(String[] args) {
         Handle handle = new Handle();
@@ -32,6 +33,11 @@ public class Main {
                         handle.Max();
                         break;
                     case 5:
+                        System.out.println("Enter the firstname: ");
+                        String firstName = scanner.nextLine();
+                        handle.fidByFirstName(firstName);
+                        break;
+                    case 6:
                         System.out.println("Quit system");
                         break;
                     default:
